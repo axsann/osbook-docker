@@ -31,6 +31,10 @@ mkfs.fat -n 'MIKAN OS' -s 2 -f 2 -R 32 -F 32 $DISK_IMG
 # fi
 # sleep 0.5
 # sudo umount $MOUNT_POINT
+
+# 参考: https://github.com/uchan-nos/os-from-zero/issues/39#issuecomment-813226631
+# ディレクトリ作成
 mmd -i $DISK_IMG ::/EFI
 mmd -i $DISK_IMG ::/EFI/BOOT
+# ファイルコピー
 mcopy -i $DISK_IMG $EFI_FILE ::/EFI/BOOT/BOOTX64.EFI
