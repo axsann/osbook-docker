@@ -1,0 +1,10 @@
+version: '3'
+services:
+    ubuntu:
+      image: uphy/ubuntu-desktop-jp:20.04
+      container_name: ubuntu-1
+      volumes:
+          - "./workspace:/root/workspace"
+      tty: true
+      ports:
+          - "5801:8080"

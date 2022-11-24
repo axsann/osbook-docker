@@ -1,3 +1,8 @@
+workspace/edk2
+workspace/mikanos
+workspace/osbook
+disk.img
+
 # Prerequisites
 *.d
 
